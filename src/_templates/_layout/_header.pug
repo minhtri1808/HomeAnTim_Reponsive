@@ -1,0 +1,75 @@
+header
+	.container-fluid
+		section.header-wrapper#header-sroll
+			.header-logo
+				a.header-logo--link(href="#")
+					img.header-logo--img(src="./assets/Header/logo.png", alt="")
+			.header-top
+				.header-top--list
+					.header-top--item
+						a.header-top--link(href="#") Tuyển Dụng
+					.header-top--item
+						a.header-top--link(href="#") Liên Hệ
+					.header-top--item.header-top--language
+						select#header__language(name="Language")
+							option Tiếng Anh
+							option Tiếng Việt
+					.header-top--item
+						input.header-top--search(type="text")
+						.header-top--icon
+							img.svg(src="./assets/Header/icon-search.svg", alt="")
+			#menuRes 
+				i.fa.fa-align-right
+			.header-bottom
+				.header-bottom--list
+					.header-bottom--item
+						a.header-bottom--link(href="#") TRANG CHỦ
+					.header-bottom--item
+						a.header-bottom--link(href="#") GIỚI THIỆU
+					.header-bottom--item
+						a.header-bottom--link(href="#") CỔ ĐÔNG
+					.header-bottom--item
+						a.header-bottom--link(href="#") LĨNH VỰC ĐẦU TƯ
+					.header-bottom--item
+						a.header-bottom--link(href="#") DỰ ÁN
+					.header-bottom--item
+						a.header-bottom--link(href="#") TIN TỨC - SỰ KIỆN
+					.header-bottom--item
+						a.header-bottom--link(href="#") THƯ VIỆN
+			.header-social
+				.header-social--list
+					-for(i=1;i<5;i++)
+						.header-social--item
+							a.headder-social--link(href="#")
+								img.svg(src=`./assets/Header/social/${i}.svg`, alt="")
+	.header-news.container
+		.row
+			.col-sm-2.header-news--title
+				a.header-new--link(href="") Tin Tức
+			.col-sm-9.header-new--list
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.header-news--item
+								a.header-new--link(href="") AN TÍN TRAVEL SẴN SÀNG BÙNG NỔ TRONG KỶ NGUYÊN 4.0
+						.swiper-slide
+							.header-news--item
+								a.header-new--link(href="") AN TÍN TRAVEL SẴN SÀNG BÙNG NỔ TRONG KỶ NGUYÊN 4.0
+						.swiper-slide
+							.header-news--item
+								a.header-new--link(href="") AN TÍN TRAVEL SẴN SÀNG BÙNG NỔ TRONG KỶ NGUYÊN 4.0
+						.swiper-slide
+							.header-news--item
+								a.header-new--link(href="") AN TÍN TRAVEL SẴN SÀNG BÙNG NỔ TRONG KỶ NGUYÊN 4.0
+						.swiper-slide
+							.header-news--item
+								a.header-new--link(href="") AN TÍN TRAVEL SẴN SÀNG BÙNG NỔ TRONG KỶ NGUYÊN 4.0
+						.swiper-slide
+							.header-news--item
+								a.header-new--link(href="") AN TÍN TRAVEL SẴN SÀNG BÙNG NỔ TRONG KỶ NGUYÊN 4.0
+						.swiper-slide
+							.header-news--item
+								a.header-new--link(href="") AN TÍN TRAVEL SẴN SÀNG BÙNG NỔ TRONG KỶ NGUYÊN 4.0
+						.swiper-slide
+							.header-news--item
+								a.header-new--link(href="") AN TÍN TRAVEL SẴN SÀNG BÙNG NỔ TRONG KỶ NGUYÊN 4.0
