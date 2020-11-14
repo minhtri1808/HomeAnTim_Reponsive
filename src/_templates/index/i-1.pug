@@ -1,1 +1,37 @@
-a(href="") 1
+seciton
+	.business-investment-wrapper
+		.business-wrapper
+				.row
+					.col-sm-2.business--logo
+						img.business--img(src="./assets/Header/logo.png", alt="")
+					.col-sm-10.business--content
+						p.business--decs
+							span Phụng sự khách hàng, phụng sự Tổ quốc 
+							| và gắn kết bạn bè thế giới, góp phần kiến tạo cộng đồng thịnh vượng, nâng cao các giá trị văn hóa Việt Nam, giao lưu với các nền văn hóa trên thế giới
+						h3.business--author
+							span TS Nguyễn Đức Thọ
+							br
+							| CHỦ TỊCH HĐQT - TGĐ 
+		.invesment-wrapper
+			.row
+				.col-sm-2.invesment-title
+						h3.invesment__text LĨNH VỰC
+							br
+							| ĐẦU TƯ
+						h3.invesment--textAC.business--author
+							span LĨNH VỰC ĐẦU TƯ
+				.col.swiper-container
+					.swiper-wrapper
+						-for(i=1;i<=4;i++)
+							.swiper-slide
+								.invesment-item
+									img.invesment--img.ofcv(src=`./assets/Main/i-1/invesment/${i}.png`, alt="")
+									.invesment--option
+										h3.invesment--text 01/
+											br
+											span BẤT ĐỘNG SẢN
+											br
+											a(href="#") Xem thêm
+					.swiper-button-prev
+					.swiper-button-next
+					.swiper-pagination

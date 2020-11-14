@@ -1,0 +1,46 @@
+section
+	.project-wrapper
+		.project-list
+				.project-menu.container
+						.project--text.project-text__defaul
+							h3 DỰ ÁN
+						.project-title.col
+							.project-item
+								p.project-tab DU LỊCH
+							.project-item
+								p.project-tab.active BẤT ĐỘNG SẢN
+							.project-item
+								p.project-tab HÀNG KHÔNG
+							.project-item
+								p.project-tab TRUYỀN THÔNG
+							.project-item
+								p.project-tab GIÁO DỤC
+							.project-item
+								p.project-tab ĐẦU TƯ
+							.project-item
+								p.project-tab CÔNG NGHỆ
+						.project--text.dropdown
+							h3 DỰ ÁN
+							.dropdown-content
+								.project-item
+									p.project-tab DU LỊCH
+								.project-item
+									p.project-tab.active BẤT ĐỘNG SẢN
+								.project-item
+									p.project-tab HÀNG KHÔNG
+								.project-item
+									p.project-tab TRUYỀN THÔNG
+								.project-item
+									p.project-tab GIÁO DỤC
+								.project-item
+									p.project-tab ĐẦU TƯ
+								.project-item
+									p.project-tab CÔNG NGHỆ
+				.swiper-container
+					.swiper-wrapper
+						-for(i=1;i<=3;i++)
+							.swiper-slide
+								img.ofcv.project--img(src=`./assets/Main/i-2/${i}.png`, alt="")
+					.swiper-button-prev
+					.swiper-button-next
+				.swiper-pagination

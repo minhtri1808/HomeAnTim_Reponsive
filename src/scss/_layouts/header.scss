@@ -6,6 +6,15 @@
     z-index: 999;
     background-color: none;
     transition: 1s;
+    @media (min-width: 375px) {
+        position: absolute;
+    }
+    @media (min-width: 575px) {
+        position: absolute;
+    }
+    @media (min-width: 757px) {
+        position: fixed;
+    }
     &::before {
         position: absolute;
         content: '';
@@ -15,12 +24,18 @@
         border-top: 0px solid transparent;
         border-bottom: 400px solid transparent;
         border-left: 225px solid map-get($mau, main);
-        transition: 1.5s;
+        transition: 1s;
+        @media (min-width: 375px) {
+            transition: 1s;
+            left: -400px;
+            position: relative;
+        }
         @media (min-width: 575px) {
-            transition: 2s;
+            transition: 1s;
             left: -400px;
         }
         @media (min-width: 767px) {
+            border-top: 0px solid transparent;
             border-bottom: 200px solid transparent;
             border-left: 180px solid map-get($mau, main);
             transition: 1s;
@@ -28,97 +43,93 @@
             left: 0;
         }
         @media (min-width: 1024px) {
+            border-top: 0px solid transparent;
             border-bottom: 250px solid transparent;
             border-left: 180px solid map-get($mau, main);
             transition: 1s;
+            top: 0;
             left: 0;
         }
         @media (min-width: 1199px) {
+            border-top: 0px solid transparent;
             border-bottom: 300px solid transparent;
             border-left: 180px solid map-get($mau, main);
             transition: 1s;
+            top: 0;
             left: 0;
         }
         @media (min-width: 1359px) {
+            border-top: 0px solid transparent;
             border-bottom: 350px solid transparent;
             border-left: 200px solid map-get($mau, main);
             transition: 1s;
+            top: 0;
             left: 0;
         }
     }
-    &.active {
-        background-color: map-get($mau, main);
-        transition: 1s;
-        &::before {
+    @media (min-width: 767px) {
+        &.active {
+            background-color: map-get($mau, main);
             transition: 1s;
-            left: -400px;
-        }
-        .header-top--link {
-            color: black;
-            transition: 1s;
-        }
-        .header-top--item {
-            &:first-child {
-                margin-left: 0;
-            }
             &::before {
-                content: '';
-                position: absolute;
-                width: 1px;
-                height: 50%;
-                right: 0;
-                top: 15%;
-                margin-right: -20%;
-                background-color: black;
+                transition: 1s;
+                left: -400px;
+            }
+            .header-top--link {
+                color: black;
                 transition: 1s;
             }
-            &:last-child {
-                &::before {
-                    content: none;
+            .header-top--item {
+                &:first-child {
+                    margin-left: 0;
                 }
-            }
-        }
-        .header-bottom--link {
-            color: black;
-            transition: 1s;
-        }
-        #header__language {
-            color: black;
-            transition: 1s;
-        }
-        // .header-bottom--list {
-        //     margin-top: 20px;
-        //     margin-bottom: 10px;
-        //     transition: 2s;
-        // }
-        .header-top--search {
-            border: 0.5px solid black;
-            transition: 1s;
-        }
-        .header-top {
-            margin-top: 25px;
-            transition: 1.5s;
-        }
-        .header-top--icon {
-            svg {
-                path {
-                    fill: black;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 50%;
+                    right: 0;
+                    top: 15%;
+                    margin-right: -20%;
+                    background-color: black;
                     transition: 1s;
                 }
+                &:last-child {
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+            .header-bottom--link {
+                color: black;
+                transition: 1s;
+            }
+            #header__language {
+                color: black;
+                transition: 1s;
+            }
+            .header-top--icon {
+                svg {
+                    path {
+                        fill: #70ad3a;
+                        transition: 1s;
+                    }
+                }
+            }
+            .header-social--list {
+                right: 0;
+            }
+            .header-social--item {
+                padding: 10px;
+                margin-bottom: 5px;
+                transition: 1s;
+                background-color: map-get($mau, xanh);
+            }
+            .header-top--search {
+                background-color: rgba(112, 173, 58, .15);
+                color: #1c1c1c;
             }
         }
-        .header-social--list {
-            right: 0;
-        }
-        .header-social--item {
-            padding: 10px;
-            margin-bottom: 5px;
-            transition: 1s;
-            background-color: map-get($mau, xanh);
-        }
-        // .header-top--search {
-        //     background-color: map-get($mau, xanh);
-        // }
     }
 }
 
@@ -126,6 +137,12 @@
     position: absolute;
     top: 17px;
     left: 37px;
+    @media (min-width: 375px) {
+        top: 20px;
+        left: 40%;
+        display: block;
+        transition: 1s;
+    }
     @media (min-width: 575px) {
         top: 20px;
         left: 50%;
@@ -154,6 +171,10 @@
 }
 
 .header-logo--img {
+    @media (min-width: 375px) {
+        width: 75%;
+        transition: 1s;
+    }
     @media (min-width: 575px) {
         width: 75%;
         transition: 1s;
@@ -177,7 +198,6 @@
 }
 
 .header-top {
-    margin-top: 25px;
     width: 100%;
     &::before {
         content: '';
@@ -188,6 +208,9 @@
         background-color: map-get($mau, main);
         opacity: 0.2;
         z-index: -1;
+        @media (min-width: 375px) {
+            opacity: 0;
+        }
         @media (min-width: 575px) {
             opacity: 0;
         }
@@ -201,10 +224,16 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
+    @media (min-width: 375px) {
+        display: -webkit-box;
+    }
 }
 
 .header-top {
     position: relative;
+    @media (min-width: 375px) {
+        right: -500px;
+    }
     @media (min-width: 575px) {
         right: -500px;
     }
@@ -212,18 +241,25 @@
         right: 0;
     }
     &.active {
-        width: 100%;
+        position: fixed;
+        width: fit-content;
         z-index: 999;
-        right: 0;
         transition: 1.2s;
+        right: 0;
         justify-content: center;
         position: relative;
         padding-bottom: 1%;
         .header-top--link {
             font-size: 1.5rem;
+            // @media (min-width: 375px) {
+            //     font-size: 1rem;
+            // }
         }
         .header-top--item {
             margin-right: 05%;
+            // @media (min-width: 375px) {
+            //     margin-right: 0%;
+            // }
         }
     }
 }
@@ -231,8 +267,19 @@
 .header-top--item {
     margin-left: 3%;
     position: relative;
+    @media (min-width: 375px) {
+        transition: 1s;
+        margin-left: 8%;
+    }
+    @media (min-width: 768px) {
+        transition: 1s;
+        margin-left: 3%;
+    }
     &:first-child {
         margin-left: 0;
+        @media (min-width: 375px) {
+            margin-left: 6%;
+        }
     }
     &::before {
         content: '';
@@ -241,12 +288,17 @@
         height: 55%;
         right: 0;
         top: 15%;
-        margin-right: -23px;
         background-color: map-get($mau, main);
     }
     &:last-child {
         &::before {
             content: none;
+        }
+    }
+    @media (min-width: 375px) {
+        transition: 1s;
+        &::before {
+            display: none;
         }
     }
     @media (min-width: 575px) {
@@ -259,8 +311,19 @@
         display: block;
         transition: 1s;
         &::before {
-            margin-right: -14px;
-            height: 55%;
+            display: block;
+            margin-right: -20%;
+            height: 40%;
+            top: 20%;
+        }
+    }
+    @media (min-width: 1024px) {
+        display: block;
+        transition: 1s;
+        &::before {
+            display: block;
+            margin-right: -40%;
+            height: 50%;
         }
     }
 }
@@ -271,14 +334,24 @@
     font-size: 0.9375rem;
     background: transparent;
     color: map-get($mau, main);
-    @media (min-width: 575px) {
-        font-size: 1.5rem;
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
     }
-    @media (min-width: 575px) {
-        font-size: 0.9375rem;
-    }
+    // @media (min-width: 575px) {
+    //     font-size: 0.9375rem;
+    // }
+    // @media (min-width: 768px) {
+    //     font-size: 1.5rem;
+    // }
+    // @media (min-width: 1024px) {
+    //     font-size: 1.5rem;
+    // }
     option {
         background: black;
+        font-size: 0.8rem;
+        width: fit-content;
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -289,11 +362,14 @@
 
 .header-bottom {
     margin-right: 30px;
+    @media (min-width: 375px) {
+        right: -100%;
+    }
     @media (min-width: 575px) {
         right: -100%;
     }
     &.active {
-        position: absolute;
+        position: fixed;
         background-color: map-get($mau, xanh);
         width: 100%;
         height: 100vh;
@@ -301,6 +377,7 @@
         right: 0;
         top: 0;
         margin: 0;
+        z-index: 800;
         .header-bottom--link {
             color: map-get($mau, main);
             font-size: 1.3rem;
@@ -312,6 +389,9 @@
             margin-left: -8%;
             justify-content: flex-end;
             flex-direction: column;
+            @media (min-width: 375px) {
+                margin-top: 16%;
+            }
         }
         .header-bottom--item {
             position: relative;
@@ -336,6 +416,9 @@
     justify-content: flex-end;
     margin-top: 30px;
     margin-bottom: 10px;
+    @media (min-width: 375px) {
+        display: none;
+    }
     @media (min-width: 575px) {
         display: none;
     }
@@ -379,6 +462,10 @@
         // padding: 4px 30px;
         padding-left: 10px;
         width: 226px;
+        @media (min-width: 368px) {
+            width: 150px;
+            transition: 1s;
+        }
         @media (min-width: 768px) {
             width: 180px;
             transition: 1s;
@@ -454,7 +541,12 @@
     position: fixed;
     right: 30px;
     bottom: 97px;
+    z-index: 998;
+    transition: 1s;
     cursor: pointer;
+    @media (min-width: 375px) {
+        right: -400px;
+    }
     @media (min-width: 575px) {
         right: -400px;
     }
@@ -464,6 +556,7 @@
 }
 
 .header-social--item {
+    transition: 1s;
     margin-bottom: 37px;
     img {
         width: 20px;
@@ -475,15 +568,29 @@
     cursor: pointer;
     display: none;
     position: fixed;
-    bottom: 0;
+    bottom: 5%;
     transition: 5s;
+    z-index: 999;
     right: 10px;
-    img {
-        width: 50px;
-    }
 }
 
 #menuRes {
+    @media (min-width: 375px) {
+        display: block;
+        color: map-get($mau, main);
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: rgb(39, 143, 8);
+        position: fixed;
+        bottom: 1%;
+        right: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
     @media (min-width: 575px) {
         display: block;
         color: map-get($mau, main);
@@ -580,6 +687,9 @@
 }
 
 .header-new--link {
+    @media (min-width: 375px) {
+        display: none;
+    }
     @media (min-width: 575px) {
         display: none;
     }
@@ -587,8 +697,9 @@
     color: map-get($mau, main);
     font-size: 1rem;
     @media (min-width: 767px) {
-        font-size: 0.738rem;
+        font-size: 0.688rem;
         display: block;
+        height: fit-content;
     }
     @media (min-width: 1024px) {
         font-size: 0.938rem;
