@@ -90,9 +90,6 @@ const initSwiperProject = () => {
             nextEl: ".project-list .swiper-button-next",
             prevEl: ".project-list .swiper-button-prev",
         },
-        autoplay: {
-            delay: 3000,
-        },
         breakpoints: {
             538: {
                 slidesPerView: 2,
@@ -205,7 +202,23 @@ const scroll = () => {
         });
     }
 };
+const tab = () => {
 
+    $('.tabs a').click(function() {
+
+        $('.panel').hide();
+        $('.tabs a.active').removeClass('active');
+        $(this).addClass('active');
+
+        var panel = $(this).attr('href');
+        $(panel).fadeIn(1000);
+
+        return false; // prevents link action
+
+    }); // end click 
+
+    $('.tabs .project-item:first a').click();
+}
 document.addEventListener("DOMContentLoaded", () => {
     getSVGs();
     Loading();
@@ -218,4 +231,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initSwiperInvesmemnt();
     scroll();
     initSwiperHeaderNews();
+    tab();
 });

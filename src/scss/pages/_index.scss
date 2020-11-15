@@ -715,3 +715,19 @@
 .swiper-pagination-bullet {
     border: 1px solid map-get($mau, xam);
 }
+
+
+/* set li properties  */
+
+
+/* all formatting goes inside 'a' */
+
+.tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .project-tab.active {
+        display: block;
+        color: map-get($mau, xanh);
+    }
+}
